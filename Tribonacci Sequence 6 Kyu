@@ -1,0 +1,18 @@
+function tribonacci(signature,n){
+  let emptyArray = signature
+  
+  if (n === 0){
+    return []
+  }
+  
+  else if (n > 0 && n < 3){
+    return signature.slice(0, n)
+  }
+  
+  while (emptyArray.length < n){
+    let x = emptyArray.slice(emptyArray.length - 3).reduce(function (acc, val) {
+      return acc + val}, 0)
+    emptyArray.push(x)
+  } 
+  return emptyArray
+}
