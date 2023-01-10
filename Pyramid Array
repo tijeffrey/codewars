@@ -1,0 +1,8 @@
+function pyramid(n) {
+  let emptyArray = []
+  for (let i = 1; i <= n; i++){
+    emptyArray.push(new Array(i).fill(1))
+  }
+
+return emptyArray
+}
